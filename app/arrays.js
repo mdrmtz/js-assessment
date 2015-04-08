@@ -71,7 +71,9 @@ define(function() {
     count : function(arr, item) {
         var count=0;
         for (var i = arr.length - 1; i >= 0; i--) {
-             arr[i]===item?count=count+1:count;
+             if(arr[i]===item){
+                count=count+1;
+            }
         }
         return count;
     },
