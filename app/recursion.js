@@ -71,23 +71,22 @@ define(function() {
         
         function brackets(bracket, open, close, pairs)
         {
-            if((open===pairs)&&(close===pairs))
+            if( (open===pairs) && (close===pairs) )
             {
                 validParentheses.push(bracket);
             }
             else
             {
-                if(open<pairs){
+                if (open<pairs) {
                     brackets(bracket + '(', open+1, close, pairs);
                 }
-                if(close<open){
+                if (close<open) {
                     brackets(bracket + ')', open, close+1, pairs);
                 }
             }
         }
-       
-        return validParentheses;
 
+        return validParentheses;
     }
   };
 });
